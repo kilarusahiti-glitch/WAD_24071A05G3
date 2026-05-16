@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Grade Calculator</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f6f9; display: flex; flex-direction: column; min-height: 100vh; margin: 0; }
+    .container { flex: 1; display: flex; justify-content: center; align-items: center; padding: 40px 20px; }
+    .card { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 36px 40px; width: 520px; }
+    h2 { font-size: 22px; margin-bottom: 6px; }
+    p { font-size: 13px; color: #555; margin-bottom: 20px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    th { background: #1a73e8; color: #fff; padding: 10px 12px; text-align: left; font-size: 13px; }
+    td { padding: 8px 12px; border-bottom: 1px solid #eee; }
+    input[type="text"], input[type="number"] { width: 100%; padding: 7px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; box-sizing: border-box; }
+    input[type="text"]:focus, input[type="number"]:focus { border-color: #1a73e8; outline: none; }
+    input[type="submit"] { width: 100%; padding: 10px; background: #1a73e8; color: #fff; border: none; border-radius: 4px; font-size: 15px; cursor: pointer; }
+    input[type="submit"]:hover { background: #155bb5; }
+    footer { text-align: center; padding: 14px; font-size: 13px; color: #555; border-top: 1px solid #ddd; background: #fff; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h2>Grade Calculator</h2>
+      <p>Enter subject names and marks out of 100 for 5 subjects.</p>
+      <form action="GradeServlet" method="post">
+        <table>
+          <tr>
+            <th>#</th>
+            <th>Subject Name</th>
+            <th>Marks (0-100)</th>
+          </tr>
+          <tr><td>1</td><td><input type="text" name="sub1" placeholder="e.g. Maths" required /></td><td><input type="number" name="marks1" min="0" max="100" required /></td></tr>
+          <tr><td>2</td><td><input type="text" name="sub2" placeholder="e.g. Physics" required /></td><td><input type="number" name="marks2" min="0" max="100" required /></td></tr>
+          <tr><td>3</td><td><input type="text" name="sub3" placeholder="e.g. Chemistry" required /></td><td><input type="number" name="marks3" min="0" max="100" required /></td></tr>
+          <tr><td>4</td><td><input type="text" name="sub4" placeholder="e.g. English" required /></td><td><input type="number" name="marks4" min="0" max="100" required /></td></tr>
+          <tr><td>5</td><td><input type="text" name="sub5" placeholder="e.g. Computer" required /></td><td><input type="number" name="marks5" min="0" max="100" required /></td></tr>
+        </table>
+        <input type="submit" value="Calculate Grade" />
+      </form>
+    </div>
+  </div>
+  <footer>@24071A05G3 (Kilaru Sahiti)</footer>
+</body>
+</html>
